@@ -25,8 +25,6 @@ function App() {
     ).then((response) => response.json().then((genres) => genres));
     genres.genres.push({ id: "", name: "None" });
     setGenres(genres.genres);
-
-    console.log(genres);
   }
 
   useEffect(() => {
@@ -67,7 +65,7 @@ function App() {
               />
             ))}
           </div>
-        </div>
+        </div>{" "}
         <PageButton
           funcao={() =>
             setPage((anterior) => (anterior > 1 ? anterior - 1 : anterior))
@@ -78,7 +76,6 @@ function App() {
         <PageButton funcao={() => setPage((anterior) => anterior + 1)}>
           {">"}
         </PageButton>
-
         <button className="placeholder-button"></button>
       </div>
       <div className="movies-container">

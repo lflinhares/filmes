@@ -8,7 +8,13 @@
   transition: background-color 100ms;
   box-shadow: inset 0 0 10px black, 8px 8px 5px rgb(0, 0, 0);
   color: white;
+  display: inline-block;
 }
 .page-button:active {
   background-color: rgb(44, 44, 44);
+}
+@media screen and (max-width: 1023px) {
+  .page-button {
+    margin: 0;
+  }
 }
